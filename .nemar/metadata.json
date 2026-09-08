@@ -2,6 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "EEG Moments Dataset (EMD)",
+  "description": "The EEG Moments Dataset (EMD) contains EEG and eye-tracking responses from 6 human subjects viewing 1,102 naturalistic 3-second videos with accompanying audio. EMD serves as the EEG companion to the BOLD Moments Dataset (BMD), enabling multimodal analyses of visual and auditory processing of dynamic naturalistic events. Each video is richly annotated with object, scene, and action labels, textual descriptions, spoken transcriptions, and memorability metrics.",
+  "methods_description": "EEG and eye-tracking (gaze and pupil size) data were collected while subjects viewed 1,102 3-second videos with audio, maintaining central fixation. Subjects saw a 1,000-video training set 6 times and a 102-video testing set 24 times, across multiple sessions and runs.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -12,52 +14,6 @@
     "Iris I.A. Groen": {},
     "Radoslaw M. Cichy": {}
   },
-  "related_identifiers": [
-    {
-      "identifier": "10.18112/openneuro.ds008257.v1.0.0",
-      "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
-    },
-    {
-      "identifier": "10.1038/s41467-024-50310-3",
-      "identifier_type": "DOI",
-      "relation_type": "References"
-    },
-    {
-      "identifier": "https://github.com/nemarDatasets/on008257",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
-      "identifier": "https://nemar.org/dataset/on008257",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    }
-  ],
-  "resource_type_general": "Dataset",
-  "modalities": [
-    "eeg"
-  ],
-  "resource_type_specific": "EEG Dataset",
-  "sizes": [
-    "36 B (1 files)"
-  ],
-  "formats": [
-    ".csv",
-    ".eeg",
-    ".gz",
-    ".h5",
-    ".json",
-    ".mat",
-    ".md",
-    ".npy",
-    ".tsv",
-    ".txt",
-    ".vhdr",
-    ".vmrk"
-  ],
-  "description": "The EEG Moments Dataset (EMD) contains EEG and eye-tracking responses from 6 human subjects to 1,102 3-second naturalistic videos with corresponding audio, presented as part of a study on visual and auditory processing of dynamic events. Each video is annotated with object, scene, and action labels, textual descriptions, transcriptions, and memorability metrics. EMD serves as the EEG companion dataset to the BOLD Moments Dataset (BMD), enabling multimodal comparisons between EEG and fMRI responses to the same naturalistic stimuli.",
-  "methods_description": "EEG and eye-tracking (gaze and pupil size) data were collected while subjects viewed 1,102 3-second videos with audio, maintaining central fixation. Each subject viewed the 1,000-video training set 6 times and the 102-video test set 24 times, across multiple sessions and runs. Raw data are provided in BIDS format, along with derivatives including preprocessed EEG and eye-tracking data and stimulus metadata.",
   "keywords": [
     {
       "term": "EEG"
@@ -75,11 +31,53 @@
       "term": "memorability"
     },
     {
-      "term": "BIDS"
-    },
-    {
-      "term": "visual processing"
+      "term": "multimodal neuroimaging"
     }
   ],
-  "source_hash": "624761b36538b305c7924fcfae78bc4bb24179867c41682303cb494afce9e480"
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/s41467-024-50310-3",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on008257",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on008257",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.18112/openneuro.ds008257.v1.0.0",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    }
+  ],
+  "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "sizes": [
+    "210 GB (5054 files)"
+  ],
+  "formats": [
+    ".csv",
+    ".eeg",
+    ".gz",
+    ".h5",
+    ".json",
+    ".mat",
+    ".md",
+    ".npy",
+    ".tsv",
+    ".txt",
+    ".vhdr",
+    ".vmrk",
+    ".yml"
+  ],
+  "source_hash": "12feca7b4f4a044742491f456a58edc2f2ae3e1032a6c1c3262d2924181ad4bd"
 }
