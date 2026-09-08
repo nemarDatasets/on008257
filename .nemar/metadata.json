@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "dataset_id": "on008257",
-  "source": "openneuro",
-  "source_id": "ds008257",
+  "pipeline_stage": "validated",
   "title": "EEG Moments Dataset (EMD)",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Alessandro T. Gifford": {},
     "Pablo Oyarzo": {},
@@ -12,21 +12,74 @@
     "Iris I.A. Groen": {},
     "Radoslaw M. Cichy": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds008257.v1.0.0",
       "identifier_type": "DOI",
       "relation_type": "IsIdenticalTo"
+    },
+    {
+      "identifier": "10.1038/s41467-024-50310-3",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on008257",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on008257",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
-  "pipeline_stage": "seeded",
-  "bids_version": "1.9.0",
-  "recording_modality": [
+  "resource_type_general": "Dataset",
+  "modalities": [
     "eeg"
   ],
-  "datatypes": [
-    "eeg"
-  ]
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "36 B (1 files)"
+  ],
+  "formats": [
+    ".csv",
+    ".eeg",
+    ".gz",
+    ".h5",
+    ".json",
+    ".mat",
+    ".md",
+    ".npy",
+    ".tsv",
+    ".txt",
+    ".vhdr",
+    ".vmrk"
+  ],
+  "description": "The EEG Moments Dataset (EMD) contains EEG and eye-tracking responses from 6 human subjects to 1,102 3-second naturalistic videos with corresponding audio, presented as part of a study on visual and auditory processing of dynamic events. Each video is annotated with object, scene, and action labels, textual descriptions, transcriptions, and memorability metrics. EMD serves as the EEG companion dataset to the BOLD Moments Dataset (BMD), enabling multimodal comparisons between EEG and fMRI responses to the same naturalistic stimuli.",
+  "methods_description": "EEG and eye-tracking (gaze and pupil size) data were collected while subjects viewed 1,102 3-second videos with audio, maintaining central fixation. Each subject viewed the 1,000-video training set 6 times and the 102-video test set 24 times, across multiple sessions and runs. Raw data are provided in BIDS format, along with derivatives including preprocessed EEG and eye-tracking data and stimulus metadata.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "eye tracking"
+    },
+    {
+      "term": "naturalistic stimuli"
+    },
+    {
+      "term": "video perception"
+    },
+    {
+      "term": "memorability"
+    },
+    {
+      "term": "BIDS"
+    },
+    {
+      "term": "visual processing"
+    }
+  ],
+  "source_hash": "624761b36538b305c7924fcfae78bc4bb24179867c41682303cb494afce9e480"
 }

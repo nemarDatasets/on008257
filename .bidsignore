@@ -2,3 +2,4 @@
 *_physio.json
 *_physioevents.tsv.gz
 *_physioevents.json
+.nemar/
