@@ -2,7 +2,7 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "EEG Moments Dataset (EMD)",
-  "description": "The EEG Moments Dataset (EMD) contains EEG and eye-tracking responses from 6 human subjects viewing 1,102 naturalistic 3-second videos with accompanying audio. EMD serves as the EEG companion to the BOLD Moments Dataset (BMD), enabling multimodal analyses of visual and auditory processing of dynamic naturalistic events. Each video is richly annotated with object, scene, and action labels, textual descriptions, spoken transcriptions, and memorability metrics.",
+  "description": "The EEG Moments Dataset (EMD) provides EEG responses from 6 human subjects to 1,102 naturalistic 3-second videos with audio, serving as the EEG companion to the BOLD Moments Dataset (BMD) fMRI dataset. Each subject viewed a 1,000-video training set 6 times and a 102-video testing set 24 times, with concurrent eye-tracking (gaze and pupil size) recorded during central fixation. Videos are annotated with object, scene, and action labels, textual descriptions, spoken transcriptions, and memorability scores, enabling multimodal analyses of visual and auditory naturalistic event processing.",
   "methods_description": "EEG and eye-tracking (gaze and pupil size) data were collected while subjects viewed 1,102 3-second videos with audio, maintaining central fixation. Subjects saw a 1,000-video training set 6 times and a 102-video testing set 24 times, across multiple sessions and runs.",
   "license": "CC0",
   "dataset_type": "raw",
@@ -31,7 +31,10 @@
       "term": "memorability"
     },
     {
-      "term": "multimodal neuroimaging"
+      "term": "BIDS"
+    },
+    {
+      "term": "audiovisual processing"
     }
   ],
   "related_identifiers": [
