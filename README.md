@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.on008257-blue)](https://doi.org/10.82901/nemar.on008257)
+
 # EEG Moments Dataset (EMD)
 
 This is the data repository for the [EEG Moments Dataset (EMD)][paper_emd]. EMD contains EEG responses to 1,102 3-second videos across 6 human subjects. During the EMD experiment, the video stimuli were presented with the corresponding audio track, so as to enable analyses of visual and/or auditory processing of naturalistic dynamic events. Each subject saw the 1,000 video training set 6 times, and the 102 video testing set 24 times. Each video is additionally human-annotated with 15 object labels, 5 scene labels, 5 action labels, 5 sentence text descriptions, 1 spoken transcription, 1 memorability score, and 1 memorability decay rate.
