@@ -34,7 +34,11 @@ The `./derivatives/` folder contains all data derivatives, including the stimulu
 - **Session 7:**
     - **Run 16:** The EEG recording only contains the first 64 (out of 66) video trials.
 
-### 👁️ Missing eye tracking data 
+### 👁️ Missing/Bad eye tracking data
+
+#### Subject 3
+
+- Subject 3 exhibited more substantial eye movements, which the source authors attribute as likely to calibration difficulties associated with wearing glasses rather than actual eye movements per se. 
 
 #### Subject 4
 
@@ -69,7 +73,7 @@ For any question regarding the EEG Moments Dataset, you can get in touch with Al
 
 If you use EMD's data, please cite the paper:
 
-> * Gifford AT, Oyarzo P, Zonneveld AW, Sartzetaki C, Groen IIA, Cichy RM. 2026. !!!TITLE!!!. _arXiv_. DOI: [!!!!!!!!!!!!!!!!!!][paper_emd]
+> * Gifford AT, Oyarzo P, Zonneveld AW, Sartzetaki C, Groen IIA, Cichy RM. 2026. A large dataset of human EEG responses to short naturalistic videos for studying dynamic visual event processing. _arXiv_. DOI: [https://doi.org/10.48550/arXiv.2608.28768][paper_emd]
 
 If you use EMD's stimuli or stimulus metadata, please also cite the paper:
 
@@ -77,7 +81,36 @@ If you use EMD's stimuli or stimulus metadata, please also cite the paper:
 
 
 
-[paper_emd]: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[paper_emd]: https://doi.org/10.48550/arXiv.2608.28768
 [paper_bmd]: https://doi.org/10.1038/s41467-024-50310-3
 [github]: https://github.com/gifale95/EMD
 [colab]: https://colab.research.google.com/drive/1Z5MDo8yy3sucggLQ4SMETtud2E1igRE9?usp=drive_link
+
+
+## Metadata reuse and source-version notes
+
+See [REUSE_METADATA.md](REUSE_METADATA.md) for stimulus joins, annotation provenance, known metadata caveats, and stimulus-access restrictions. This metadata-only enrichment does not change the archived recordings or their source release.
+
+## Stimuli (metadata only)
+
+No video is included in this dataset. The 1,102 videos are the stimulus set of the BOLD Moments Dataset (BMD; Lahner et al.
+2024, https://doi.org/10.1038/s41467-024-50310-3), 3-second clips that derive from Moments in Time. They belong to third
+parties. Obtain them from the official BMD page https://boldmomentsdataset.csail.mit.edu/stimuli_metadata after accepting its
+terms (non-commercial research and education only; no redistribution of videos, images, tags or text). See also
+`stimuli/stimuli_download.txt`.
+
+`stimuli/stimuli.tsv` has one row per `stim_id` (the integer in every `*_events.tsv`; 1-1000 train, 1001-1102 test):
+duration, frame rate, size, frame count, audio track and SHA-256 of the BMD `stimulus_set` MP4 (H.264) file with that number,
+so you can check your own copy. Over the 1,102 files: 268 x 268 pixels; 3.00-3.11 s; 30 fps (823 files), 24 (146),
+25 (84), 15 (30), other rates (19).
+
+Known issue: none of the 1,102 BMD MP4 files has an audio track, while EMD presented the videos with their audio (see
+above). The audio heard in the experiment therefore most likely came from another version of each clip (an inference from
+the missing audio tracks, not stated by the authors), and the SHA-256 identifies the
+BMD file, not necessarily the exact presentation file. 34 videos have no audio at all
+(`derivatives/stimuli_metadata/videos_with_no_audio.csv`).
+
+Join: `stim_id` in the events = `stim_id` in `stimuli/stimuli.tsv` = BMD video number = the zero-padded keys of
+`derivatives/stimuli_metadata/annotations.json`.
+
+Added 2026-10-08 (metadata enrichment, see CHANGES). Properties were measured on the files obtained under the BMD terms.
